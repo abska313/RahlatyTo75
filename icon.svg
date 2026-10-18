@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="38%" r="75%">
+      <stop offset="0%" stop-color="#22060f"/>
+      <stop offset="55%" stop-color="#120307"/>
+      <stop offset="100%" stop-color="#080808"/>
+    </radialGradient>
+    <linearGradient id="maroonGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a081a"/>
+      <stop offset="45%" stop-color="#650F27"/>
+      <stop offset="100%" stop-color="#b8234d"/>
+    </linearGradient>
+    <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="50%" stop-color="#f2b4c4"/>
+      <stop offset="100%" stop-color="#941B3D"/>
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- خلفية مربعة بحواف ناعمة -->
+  <rect width="512" height="512" rx="116" fill="url(#bgGrad)"/>
+  <rect width="504" height="504" x="4" y="4" rx="112" fill="none" stroke="#650F27" stroke-width="2.5" stroke-opacity="0.45"/>
+
+  <!-- دوائر المدار الهندسية -->
+  <circle cx="256" cy="205" r="145" fill="none" stroke="#650F27" stroke-width="1.5" stroke-opacity="0.25" stroke-dasharray="8 8"/>
+  <circle cx="256" cy="205" r="95" fill="none" stroke="#941B3D" stroke-width="1" stroke-opacity="0.2"/>
+
+  <!-- مسار التحول الصاعد -->
+  <path d="M 125 295 C 160 295, 200 280, 230 225 C 260 170, 280 115, 365 105 C 385 102, 400 110, 405 120" 
+        fill="none" stroke="url(#maroonGrad)" stroke-width="18" stroke-linecap="round" filter="url(#softGlow)"/>
+  
+  <path d="M 145 308 C 180 308, 220 285, 245 235 C 270 185, 292 135, 370 125" 
+        fill="none" stroke="url(#glowLine)" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- محطات المسار -->
+  <circle cx="125" cy="295" r="10" fill="#121212" stroke="#650F27" stroke-width="3"/>
+  <circle cx="125" cy="295" r="4.5" fill="#F5F5F5"/>
+  <circle cx="230" cy="225" r="8" fill="#941B3D" stroke="#ffffff" stroke-width="2"/>
+  <circle cx="300" cy="150" r="9" fill="#941B3D" stroke="#ffffff" stroke-width="2"/>
+  
+  <!-- نجمة الهدف والانضباط -->
+  <g transform="translate(372, 114)">
+    <polygon points="0,-20 5,-6 20,0 5,6 0,20 -5,6 -20,0 -5,-6" fill="#ffffff" filter="url(#softGlow)"/>
+    <circle cx="0" cy="0" r="4" fill="#941B3D"/>
+  </g>
+
+  <!-- كتابة اسم التطبيق -->
+  <text x="256" y="395" font-family="'Cairo', 'Tajawal', 'Segoe UI', Tahoma, sans-serif" font-size="64" font-weight="900" text-anchor="middle" fill="#F5F5F5" letter-spacing="1">رِحْلَتِي</text>
+  <text x="256" y="435" font-family="'Cairo', 'Tajawal', 'Segoe UI', sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#941B3D" letter-spacing="4">JOURNEY OF DISCIPLINE</text>
+  <line x1="180" y1="458" x2="332" y2="458" stroke="#650F27" stroke-width="2" stroke-linecap="round"/>
+</svg>
